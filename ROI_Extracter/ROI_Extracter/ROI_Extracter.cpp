@@ -4,9 +4,9 @@
 #include "stdafx.h"
 
 
-#include "stdafx.h"
 #include "opencv2\opencv.hpp"
 #include <iostream>
+#include "dataset.h"
 
 using namespace cv;
 using namespace std;
@@ -17,9 +17,15 @@ Point cor1, cor2;
 Rect box;
 uint32_t count = 0;
 
-
-void mouse_call(int event, int x, int y, int, void*)
+struct mouse_data
 {
+	string file_name;
+};
+
+void mouse_call(int event, int x, int y, int, void* data)
+{
+	mouse_data* mdata = (mouse_data*)data;
+
 	if (event == EVENT_LBUTTONDOWN)
 	{
 		leftDown = true;
@@ -60,36 +66,43 @@ void mouse_call(int event, int x, int y, int, void*)
 		box.height = abs(cor1.y - cor2.y);
 		box.x = min(cor1.x, cor2.x);
 		box.y = min(cor1.y, cor2.y);
-		Mat crop(img, box); //Selecting a ROI(region of interest) from the original pic
-		namedWindow("Cropped Image");
-		//imshow("Cropped Image", crop); //showing the cropped image
+		Mat cropped(img, box); //Selecting a ROI(region of interest) from the original pic
+		Mat cropped_resized;
+		resize(cropped, cropped_resized, cv::Size(100, 100));
 		
-		string file_name = "C:/Users/sanand2/Dropbox/MyProjects/Computer_Vision/ROI_Extracter/ROI_Extracter/ROI_" + to_string(::count++) + ".jpg";
-		imwrite(file_name, crop);
+		string roi_file_name = output_folder + mdata->file_name + to_string(::count++) + ".jpg";
+		imwrite(roi_file_name, cropped_resized);
 		leftDown = false;
 		leftup = false;
-
 	}
-
-
 }
 
-int main()
+void process_image(string file_name)
 {
-	img = imread("C:/Users/sanand2/Dropbox/MyProjects/OpenCV/OpencvTest/mcway.JPG", IMREAD_GRAYSCALE);
+	string file_path = dataset_folder + file_name;
+	img = imread(file_path, IMREAD_GRAYSCALE);
 	namedWindow("Original");
 	imshow("Original", img);
 
-	//cvNamedWindow("Original", CV_WINDOW_NORMAL);
-	//cvSetWindowProperty("Original", CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
-	//imshow("Original", img);
+	mouse_data data;
+	data.file_name = file_name;
 
-	setMouseCallback("Original", mouse_call); //setting the mouse callback for selecting the region with mouse
+	setMouseCallback("Original", mouse_call, (void*)&data); //setting the mouse callback for selecting the region with mouse
 
 	while (char(waitKey(1) != 'q')) //waiting for the 'q' key to finish the execution
 	{
 
 	}
+}
+
+int main()
+{
+
+	for (size_t i = 0; i < NUMBER_OF_FILES; i++)
+	{
+		process_image(file_names[i]);
+	}
+
 	return 0;
 }
 
