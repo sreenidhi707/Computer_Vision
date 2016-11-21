@@ -1,0 +1,4 @@
+﻿  stdafx.cpp
+  face_detection.cpp
+face_detection.obj : error LNK2019: unresolved external symbol "public: __cdecl cv::DetectionBasedTracker::Parameters::Parameters(void)" (??0Parameters@DetectionBasedTracker@cv@@QEAA@XZ) referenced in function main
+C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\face_detection\x64\Debug\face_detection.exe : fatal error LNK1120: 1 unresolved externals

@@ -1,0 +1,13 @@
+
+1. 	Right click Project > Settings > C/C++ > General > Additional Include Directories
+	Keep platform as x64
+	Add C:\opencv\build\include;
+	
+2. 	Right click Project > Settings > Linker > General > Additional Library Directories
+	Keep platform as x64
+	Add C:\opencv\build\x64\vc14\lib
+	
+3. 	Right click Project > Settings > Linker > Input
+	Additional Dependencies
+	For Debug --> Add opencv_world310d.lib;
+	fOR Release --> Add opencv_world310.lib;

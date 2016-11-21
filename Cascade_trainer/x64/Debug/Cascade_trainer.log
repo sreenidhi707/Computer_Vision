@@ -1,0 +1,15 @@
+﻿  stdafx.cpp
+  traincascade.cpp
+  old_ml_tree.cpp
+  old_ml_inner_functions.cpp
+  old_ml_data.cpp
+  old_ml_boost.cpp
+  lbpfeatures.cpp
+  imagestorage.cpp
+  HOGfeatures.cpp
+  haarfeatures.cpp
+  features.cpp
+  cascadeclassifier.cpp
+  boost.cpp
+  Generating Code...
+  Cascade_trainer.vcxproj -> C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\Cascade_trainer\x64\Debug\Cascade_trainer.exe

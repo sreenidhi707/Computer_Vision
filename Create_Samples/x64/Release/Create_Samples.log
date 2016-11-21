@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  createsamples.cpp
+  utility.cpp
+  Generating code
+  All 54 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Create_Samples.vcxproj -> C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\Create_Samples\x64\Release\Create_Samples.exe
