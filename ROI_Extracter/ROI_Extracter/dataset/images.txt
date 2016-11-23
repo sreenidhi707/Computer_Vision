@@ -1,0 +1,8 @@
+C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\ROI_Extracter\ROI_Extracter\dataset\img_00003.jpg
+C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\ROI_Extracter\ROI_Extracter\dataset\img_00010.jpg
+C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\ROI_Extracter\ROI_Extracter\dataset\img_00012.jpg
+C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\ROI_Extracter\ROI_Extracter\dataset\img_00015.jpg
+C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\ROI_Extracter\ROI_Extracter\dataset\img_00019.jpg
+C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\ROI_Extracter\ROI_Extracter\dataset\img_00020.jpg
+C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\ROI_Extracter\ROI_Extracter\dataset\img_00029.jpg
+C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\ROI_Extracter\ROI_Extracter\dataset\img_00032.jpg

@@ -6,6 +6,7 @@
 
 #include "opencv2\opencv.hpp"
 #include <iostream>
+#include <fstream>
 #include "dataset.h"
 
 using namespace cv;
@@ -72,20 +73,31 @@ void mouse_call(int event, int x, int y, int, void* data)
 		
 		string roi_file_name = output_folder + mdata->file_name + to_string(::count++) + ".jpg";
 		imwrite(roi_file_name, cropped_resized);
+
+		fstream fs;
+		string annotation = roi_file_name + " 1" + " 0 0 100 100";
+		fs.open(annotations_file_path, std::fstream::in | std::fstream::out | std::fstream::app);
+		fs << annotation << endl;
+		fs.close();
+
 		leftDown = false;
 		leftup = false;
 	}
 }
 
-void process_image(string file_name)
+void process_image(string file_path)
 {
-	string file_path = dataset_folder + file_name;
 	img = imread(file_path, IMREAD_GRAYSCALE);
 	namedWindow("Original");
 	imshow("Original", img);
 
+	std::size_t index_backslash = file_path.find_last_of("\\");
+	std::size_t index_dot = file_path.find_last_of(".");
+	std::size_t length = index_dot - index_backslash - 1;
+	string file_name = file_path.substr(index_backslash + 1, length);
+
 	mouse_data data;
-	data.file_name = file_name;
+	data.file_name = file_name + "_ROI_";
 
 	setMouseCallback("Original", mouse_call, (void*)&data); //setting the mouse callback for selecting the region with mouse
 
@@ -97,10 +109,20 @@ void process_image(string file_name)
 
 int main()
 {
-
-	for (size_t i = 0; i < NUMBER_OF_FILES; i++)
+	ifstream info_file(info_file_path);
+	string line;
+	vector<string> image_paths;
+	while (info_file.good())
 	{
-		process_image(file_names[i]);
+		getline(info_file, line);
+		image_paths.push_back(line);
+	}
+
+
+
+	for (size_t i = 0; i < image_paths.size(); i++)
+	{
+		process_image(image_paths[i]);
 	}
 
 	return 0;
