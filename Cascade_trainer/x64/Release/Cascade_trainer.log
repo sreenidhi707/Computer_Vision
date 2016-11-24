@@ -1,0 +1,17 @@
+﻿  stdafx.cpp
+  boost.cpp
+  cascadeclassifier.cpp
+  features.cpp
+  haarfeatures.cpp
+  HOGfeatures.cpp
+  imagestorage.cpp
+  lbpfeatures.cpp
+  old_ml_boost.cpp
+  old_ml_data.cpp
+  old_ml_inner_functions.cpp
+  old_ml_tree.cpp
+  traincascade.cpp
+  Generating code
+  All 1896 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Cascade_trainer.vcxproj -> C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\Cascade_trainer\x64\Release\Cascade_trainer.exe
