@@ -1,0 +1,4 @@
+﻿  CIFAR_Helper.cpp
+c:\users\sanand2\dropbox\myprojects\computer_vision\cifar_helper\cifar_helper.cpp(33): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+c:\users\sanand2\dropbox\myprojects\computer_vision\cifar_helper\cifar_helper.cpp(46): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  CIFAR_Helper.vcxproj -> C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\CIFAR_Helper\x64\Debug\CIFAR_Helper.exe

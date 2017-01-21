@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommandArguments>-vid highwayI_raw.AVI</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\Background_subtraction\x64\Debug</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerCommandArguments>-vid highwayI_raw.AVI</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>C:\Users\sanand2\Dropbox\MyProjects\Computer_Vision\Background_subtraction\x64\Debug</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

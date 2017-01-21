@@ -1,0 +1,31 @@
+﻿  stdafx.cpp
+  CIFAR_Helper.cpp
+c:\users\sanand2\dropbox\myprojects\computer_vision\cifar_helper\cifar_helper.cpp(17): error C2440: '<function-style-cast>': cannot convert from 'std::ifstream' to 'std::istreambuf_iterator<uint8_t,std::char_traits<_Elem>>'
+          with
+          [
+              _Elem=uint8_t
+          ]
+  c:\users\sanand2\dropbox\myprojects\computer_vision\cifar_helper\cifar_helper.cpp(17): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\sanand2\dropbox\myprojects\computer_vision\cifar_helper\cifar_helper.cpp(17): error C2664: 'std::vector<uint8_t,std::allocator<_Ty>>::vector(const std::vector<_Ty,std::allocator<_Ty>> &)': cannot convert argument 1 from 'std::istreambuf_iterator<uint8_t,std::char_traits<_Elem>>' to 'const std::allocator<_Ty> &'
+          with
+          [
+              _Ty=uint8_t
+          ]
+          and
+          [
+              _Elem=uint8_t
+          ]
+          and
+          [
+              _Ty=uint8_t
+          ]
+  c:\users\sanand2\dropbox\myprojects\computer_vision\cifar_helper\cifar_helper.cpp(17): note: Reason: cannot convert from 'std::istreambuf_iterator<uint8_t,std::char_traits<_Elem>>' to 'const std::allocator<_Ty>'
+          with
+          [
+              _Elem=uint8_t
+          ]
+          and
+          [
+              _Ty=uint8_t
+          ]
+  c:\users\sanand2\dropbox\myprojects\computer_vision\cifar_helper\cifar_helper.cpp(17): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
